@@ -1,0 +1,131 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4; 
+}
+
+.contenedor {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    background: white; 
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(58, 24, 231, 0.518); 
+}
+
+.encabezado, .nav, .main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.encabezado {
+    align-items: center;
+    background: #a103fc; 
+    color: white; 
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    background: #333; 
+    padding: 10px 0;
+}
+
+.nav a {
+    color: white; 
+    padding: 10px 20px;
+    text-decoration: none; 
+    font-weight: bold; 
+    text-align: center;
+    flex: 1;
+}
+
+.nav a:hover {
+    background: #555; 
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center; 
+}
+
+.main section {
+    flex: 1;
+    margin: 10px;
+}
+
+.main section h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main section p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
+
+.main section img {
+    margin-top: 10px;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+
+/* Media query para tabletas */
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .encabezado, .nav, .main {
+        flex-direction: column;
+        text-align: center; 
+    }
+
+    .nav {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main section {
+        margin-bottom: 20px;
+    }
+
+    .main section img {
+        max-width: 80px;
+    }
+}
+
+/* Media query para teléfonos móviles */
+@media (max-width: 480px) {
+    .contenedor {
+        grid-template-columns: 1fr; 
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .main section {
+        margin-bottom: 20px;
+    }
+
+    .main section img {
+        max-width: 60px;
+    }
+}
